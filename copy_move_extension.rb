@@ -15,10 +15,13 @@ class CopyMoveExtension < Radiant::Extension
   end
 
   def activate
-    admin.pages.index.add :sitemap_head, 'copy_move_extra_th'
-    admin.pages.index.add :node, 'copy_move_extra_td', :after => "add_child_column"
-  end
-  
-  def deactivate
+    Admin::PagesController.class_eval do
+      include CopyMove::Controller
+      helper :copy_move
+    end
+    Page.class_eval { include CopyMove::Model }
+    admin.page.index.add :sitemap_head, 'copy_move_extra_th'
+    admin.page.index.add :node, 'copy_move_extra_td', :after => "add_child_column"
+    admin.page.index.add :bottom, 'copy_move_popup'
   end
 end
