@@ -4,7 +4,7 @@ module CopyMove
       test_page = self.clone
       test_page.parent = parent
       until test_page.valid?
-        index = (index || 0) + 1
+        index = (index.to_i || 0) + 1
         test_page.title = "#{title} (Copy#{' '+index if index > 1})"
         test_page.slug = "#{slug}-#{index}"
       end
