@@ -4,9 +4,10 @@ module CopyMove
       test_page = self.clone
       test_page.parent = parent
       until test_page.valid?
-        index = (index.to_i || 0) + 1
-        test_page.title = "#{title} (Copy#{' '+index if index > 1})"
-        test_page.slug = "#{slug}-#{index}"
+        index = (index || 0) + 1
+        test_page.title = "#{title} Copy#{' ' + index.to_s if index > 1}"
+        test_page.slug = "#{slug}#{ "-copy" + index.to_s if index > 1}"
+        test_page.breadcrumb = test_page.title
       end
       {:slug => test_page.slug, :title => test_page.title}
     end
