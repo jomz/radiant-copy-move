@@ -16,10 +16,11 @@
   :plain
     document.observe('dom:loaded', function(){
       $(document.body).observe('click', function(){$$('ul.popup-menu').invoke('hide');});
-      $$('td.copy-move ul.popup-menu a').each(function(element){
+      $$('td.copy-move a[href!="#"]').each(function(element){
           element.observe('click', function(evt){
             evt.stop();
-            element.up('ul').hide();
+            if (element.up('ul'))
+              element.up('ul').hide();
             center($('copy-move'));
             $('copy-move').show().down('form').setAttribute('action', element.href);
           });
