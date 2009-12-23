@@ -8,6 +8,7 @@ module CopyMove
         test_page.title = "#{title} Copy #{index}"
         test_page.slug = "#{slug}-copy-#{index}"
         test_page.breadcrumb = test_page.title
+        test_page.errors.clear # Reset error status before revalidating
       end
       {:slug => test_page.slug, :title => test_page.title, :breadcrumb => test_page.breadcrumb}
     end
