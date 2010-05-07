@@ -1,0 +1,46 @@
+- form_tag :action => "copy_move" do
+  .form-area
+
+    %h2 What do you want to do?
+
+    %input{:type => "radio", :name => "copy_move_action", :id => "copy_move_action_page", :value => "page", :checked => "true"}
+    %label{:for => "copy_move_action_page"}== Copy only '#{@page.title}' page.
+
+    %br
+
+    %input{:type => "radio", :name => "copy_move_action", :id => "copy_move_action_children", :value => "children"}
+    %label{:for => "copy_move_action_children"}== Copy '#{@page.title}' and its first-level children.
+
+    %br
+
+    %input{:type => "radio", :name => "copy_move_action", :id => "copy_move_action_tree", :value => "tree"}
+    %label{:for => "copy_move_action_tree"}== Copy '#{@page.title}' and all of its children.
+
+    %br
+
+    - if @page.parent
+      %input{:type => "radio", :name => "copy_move_action", :id => "copy_move_action_move", :value => "move"}
+      %label{:for => "copy_move_action_move"} Only move page.
+      %br
+
+    %br
+
+    %p
+      - if @page.parent
+        %strong Copy or move under
+      - else
+        %strong Copy under
+      %br
+      = page_parent_select_tag
+
+
+    %p
+      %strong Page status
+      %br
+      = select_tag "status_id", options_for_select(Status.find_all.map{ |s| [s.name, s.id] }.unshift(['Use the same status', nil]))
+
+    %p.buttons
+      = submit_tag "Ok", :class => 'button'
+      or
+      = link_to "Cancel", admin_pages_url
+     
