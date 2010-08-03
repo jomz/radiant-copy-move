@@ -1,6 +1,6 @@
 module CopyMoveHelper   
   def page_parent_select_tag
-    homes = Page.find_all_by_parent_id nil
+    homes = Object.const_defined?(:MultiSiteExtension) ? [ Page.current_site.homepage ] : Page.find_all_by_parent_id(nil)
     list = homes.inject([]) do |l, home|
       l.concat build_tree(home, [])
     end

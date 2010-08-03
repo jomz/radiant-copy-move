@@ -5,10 +5,12 @@ module CopyMove
       test_page.parent = parent
       until test_page.valid?
         index = (index || 0) + 1
-        test_page.title = "#{title} (Copy#{' '+index if index > 1})"
-        test_page.slug = "#{slug}-#{index}"
+        test_page.title = "#{title} Copy #{index}"
+        test_page.slug = "#{slug}-copy-#{index}"
+        test_page.breadcrumb = test_page.title
+        test_page.errors.clear # Reset error status before revalidating
       end
-      {:slug => test_page.slug, :title => test_page.title}
+      {:slug => test_page.slug, :title => test_page.title, :breadcrumb => test_page.breadcrumb}
     end
 
     def move_under(parent)
