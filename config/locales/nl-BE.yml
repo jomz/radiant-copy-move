@@ -1,10 +1,10 @@
-en:
+nl-BE:
   copy_move:
     copied:
       'Er werd een kopie van <strong>{{page}}</strong> gemaakt onder <strong>{{parent}}</strong>.'
     immediate_children_copied:
-      'Kopieën van <strong>{{page}}</strong> en de eerst onderliggende pagina\'s zijn gemaakt onder <strong>{{parent}}</strong>'
+      "Kopieën van <strong>{{page}}</strong> en de eerst onderliggende pagina's zijn gemaakt onder <strong>{{parent}}</strong>"
     descendants_copied:
-      'Kopieën van <strong>{{page}}</strong> en alle onderliggende pagina\'s zijn gemaakt onder <strong>{{parent}}</strong>.'
+      "Kopieën van <strong>{{page}}</strong> en alle onderliggende pagina's zijn gemaakt onder <strong>{{parent}}</strong>."
     descendants_moved:
-      'De pagina <strong>{{page}}</strong> en alle onderliggende pagina\'s zijn verplaatst onder <strong>{{parent}}</strong>.'
+      "De pagina <strong>{{page}}</strong> en alle onderliggende pagina's zijn verplaatst onder <strong>{{parent}}</strong>."
