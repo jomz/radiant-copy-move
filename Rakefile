@@ -7,7 +7,7 @@ begin
     gem.email = "benny@gorilla-webdesign.be"
     gem.homepage = "http://github.com/jomz/radiant-comments-extension"
     gem.authors = ["Benny Degezelle"]
-    gem.add_dependency 'radiant', "=0.9.0"
+    gem.add_dependency 'radiant', ">=0.9.1"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
