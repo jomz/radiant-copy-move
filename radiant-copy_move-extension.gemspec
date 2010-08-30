@@ -38,6 +38,7 @@ Gem::Specification.new do |s|
      "lib/copy_move/controller.rb",
      "lib/copy_move/model.rb",
      "lib/tasks/copy_move_extension_tasks.rake",
+     "pkg/radiant-copy_move-extension-2.1.0.gem",
      "public/images/admin/copy-move.png",
      "public/images/admin/page_white.png",
      "public/images/admin/page_white_copy.png",
