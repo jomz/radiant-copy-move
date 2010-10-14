@@ -1,4 +1,4 @@
-nl-BE:
+nl:
   copy_move:
     copied:
       'Er werd een kopie van <strong>{{page}}</strong> gemaakt onder <strong>{{parent}}</strong>.'
