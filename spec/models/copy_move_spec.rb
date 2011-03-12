@@ -5,12 +5,12 @@ describe CopyMove do
   
   describe "suggesting a new slug and title" do
     it "should use the same slug and title when there is not a child page of the new parent that has the same slug or title" do
-      pages(:first).new_slug_and_title_under(pages(:parent)).should == {:slug => "first", :title => "First"}
+      pages(:first).new_slug_and_title_under(pages(:parent)).should == {:slug => "first", :title => "First", :breadcrumb => "First"}
     end
     
     it "should use a different slug and title when there is a conflicting child page of the new parent" do
       pages(:first).new_slug_and_title_under(pages(:home)).should_not == {:slug => "first", :title => "First"}
-      pages(:first).new_slug_and_title_under(pages(:home)).should == {:slug => "first-1", :title => "First (Copy)"}
+      pages(:first).new_slug_and_title_under(pages(:home)).should == {:slug => "first-copy-1", :title => "First Copy 1", :breadcrumb => "First Copy 1"}
     end
   end
   
@@ -36,6 +36,9 @@ describe CopyMove do
     
     it "should duplicate the page" do
       @new_page = @page.copy_to(pages(:another))
+      puts @page.attributes.inspect
+      puts '<br/>'
+      puts @new_page.attributes.inspect
       @page.attributes.delete_if {|k,v| [:id, :parent_id].include?(k.to_sym) }.each do |key,value|
         @new_page[key].should == value
       end

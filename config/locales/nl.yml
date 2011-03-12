@@ -1,5 +1,13 @@
 nl:
   copy_move:
+    button: "Copy/Move"
+    copy_page: "Copy Page"
+    copy_page_only: "Copy Page Only"
+    copy_whole_subtree: "Copy Whole Subtree"
+    move_entire_subtree: "Move Entire Subtree"
+    move_page: "Move Page"
+    copy_with_first_level_children: "Copy With First-level Children"
+
     copied:
       'Er werd een kopie van <strong>{{page}}</strong> gemaakt onder <strong>{{parent}}</strong>.'
     immediate_children_copied:

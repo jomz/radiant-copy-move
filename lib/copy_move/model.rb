@@ -13,9 +13,10 @@ module CopyMove
       {:slug => test_page.slug, :title => test_page.title, :breadcrumb => test_page.breadcrumb}
     end
 
-    def move_under(parent)
+    def move_under(parent, status = nil)
       raise CircularHierarchy.new(self) if parent == self || parent.ancestors.include?(self)
-      update_attributes!(:parent_id => parent.id)
+      status_id = status.blank? ? self.status_id : status
+      update_attributes!(:parent_id => parent.id, :status_id => status_id)
     end
 
     def copy_to(parent, status = nil)
