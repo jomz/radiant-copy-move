@@ -1,10 +1,17 @@
 = CopyMove
 
   Created by: Andrea Franz - http://gravityblast.com
-  Version: 2.1.0
+  Version: 0.9 (compatible with Radiant 0.9)
   Contact: andrea AT gravityblast DOT com
 
-This extension adds a new action ('CopyMove') in the Radiant's administration interface near the 'Add child' button. With this extension you can copy or move a page (and all of its children).
+  This fork merged from others, refactored and extended by:  Andrew vonderLuft - http://avlux.net
+  Contact: avonderluft AT avlux dot net
+
+This extension adds a new action ('CopyMove') in the Radiant's administration interface near the 'Add child' button. With this extension you can copy or move a page with or without its children.
+
+== Updates
+
+03/2011 - refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
 
 == Requirements
 
@@ -18,7 +25,7 @@ See http://groups.google.com/group/radiantcms-dev/browse_frm/thread/d07f7fffd84b
   
   cd vendor/extensions  
   
-	git clone git://github.com/pilu/radiant-copy-move.git copy_move
+	git clone git://github.com/avonderluft/radiant-copy-move.git copy_move
 
 1.a FOR RADIANT VERSION < 0.6.7
 
@@ -41,6 +48,7 @@ Which will copy some needed files to the public directory of your app.
  Mario T. Lanza     
  Daniel Collis-Puro
  Sean Cribbs
+ Andrew vonderLuft
  
 == Credits
 

@@ -2,7 +2,7 @@ require_dependency 'application_controller'
 
 class CopyMoveExtension < Radiant::Extension
   version "0.9"
-  description "Adds the ability to copy and move a page and all of its children"
+  description "Adds the ability to copy or move a page with or without its children"
   url "https://github.com/avonderluft/radiant-copy-move"
 
   def activate
