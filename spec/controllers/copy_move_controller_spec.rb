@@ -5,7 +5,7 @@ describe Admin::PagesController do
   before :each do
     login_as :existing
   end
-  
+
   describe "routes" do
     it "should route URLs to the copy_page action" do
       route_for(:controller => "admin/pages", :action => "copy_page", :id => "1").should == "/admin/pages/1/copy_page"
@@ -22,9 +22,9 @@ describe Admin::PagesController do
       params_from(:post, "/admin/pages/1/copy_tree").should == {:controller => "admin/pages", :action => "copy_tree", :id => "1"}
     end
     
-    it "should route URLs to the move action" do
-      route_for(:controller => "admin/pages", :action => "move", :id => "1").should == "/admin/pages/1/move"
-      params_from(:post, "/admin/pages/1/move").should == {:controller => "admin/pages", :action => "move", :id => "1"}
+    it "should route URLs to the move_page action" do
+      route_for(:controller => "admin/pages", :action => "move_page", :id => "1").should == "/admin/pages/1/move_page"
+      params_from(:post, "/admin/pages/1/move_page").should == {:controller => "admin/pages", :action => "move_page", :id => "1"}
     end
   end
   
@@ -115,10 +115,10 @@ describe Admin::PagesController do
     end
   end
   
-  describe "POST to /admin/pages/:id/move" do
+  describe "POST to /admin/pages/:id/move_page" do
     describe "when moving to a valid parent" do
       before :each do
-        post :move, :id => page_id(:first), :parent_id => page_id(:another)
+        post :move_page, :id => page_id(:first), :parent_id => page_id(:another)
       end
 
       it "should load the page" do
@@ -144,7 +144,7 @@ describe Admin::PagesController do
     
     describe "when moving to an invalid parent" do
       before :each do
-        post :move, :id => page_id(:parent), :parent_id => page_id(:child)
+        post :move_page, :id => page_id(:parent), :parent_id => page_id(:child)
       end
       
       it "should load the page" do

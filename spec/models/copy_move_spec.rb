@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe CopyMove do
-  dataset :pages
-  
+  dataset :pages, :users
+
   describe "suggesting a new slug and title" do
     it "should use the same slug and title when there is not a child page of the new parent that has the same slug or title" do
       pages(:first).new_slug_and_title_under(pages(:parent)).should == {:slug => "first", :title => "First", :breadcrumb => "First"}
@@ -32,14 +32,14 @@ describe CopyMove do
   describe "copying the page" do
     before :each do
       @page = pages(:first)
+      UserActionObserver.current_user = users(:existing)
+      @page.update_attribute(:created_by_id, user_id(:existing))
     end
     
     it "should duplicate the page" do
       @new_page = @page.copy_to(pages(:another))
-      puts @page.attributes.inspect
-      puts '<br/>'
-      puts @new_page.attributes.inspect
-      @page.attributes.delete_if {|k,v| [:id, :parent_id].include?(k.to_sym) }.each do |key,value|
+      # adding :position to excluded attributes to temporarily accommodate reorder extension
+      @page.attributes.delete_if {|k,v| [:id, :parent_id, :position].include?(k.to_sym) }.each do |key,value|
         @new_page[key].should == value
       end
       @page.parts.each do |part|
