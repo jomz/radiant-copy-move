@@ -1,7 +1,7 @@
 h1. CopyMove
 
   * Created by: Andrea Franz - http://gravityblast.com
-  * Version: 0.9 (compatible with Radiant 0.9)
+  * Version: 2.3.0 (compatible with Radiant >= 0.9.1)
   * Contact: andrea AT gravityblast DOT com
 
   * This fork merged from others, refactored and extended by:  Andrew vonderLuft - http://avlux.net
@@ -13,7 +13,7 @@ This extension adds a new action ('CopyMove') in the Radiant's administration in
 
 h2. Updates
 
-* 03/2011 - merged updates from othe forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
+* 2.3.0 - 03/2011 - merged updates from othe forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
 
 h2. Requirements
 
