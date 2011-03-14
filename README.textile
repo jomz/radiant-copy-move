@@ -1,0 +1,53 @@
+h1. CopyMove
+
+  * Created by: Andrea Franz - http://gravityblast.com
+  * Version: 0.9 (compatible with Radiant 0.9)
+  * Contact: andrea AT gravityblast DOT com
+
+  * This fork merged from others, refactored and extended by:  Andrew vonderLuft - http://avlux.net
+  * Contact: avonderluft AT avlux DOT net
+
+h2. Description
+
+This extension adds a new action ('CopyMove') in the Radiant's administration interface near the 'Add child' button. With this extension you can copy or move a page with or without its children.
+
+h2. Updates
+
+* 03/2011 - merged updates from othe forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
+
+h2. Requirements
+
+* For Radiant versions < 0.6.7 You need the "shards extension":http://groups.google.com/group/radiantcms-dev/browse_frm/thread/d07f7fffd84b3ce0/5efa6fd6c2e1668e?lnk=gst&q=shards#5efa6fd6c2e1668e 
+* Radiant versions >= 0.6.7 and greater have Shards built in.
+
+h2. Installation
+
+# Get the latest version of CopyMove extension code:
+  
+  <pre>
+  cd vendor/extensions  
+	git clone git://github.com/avonderluft/radiant-copy-move.git copy_move
+	</pre>
+
+## For Radiant versions < 0.6.7
+
+Open the environment.rb and set shards as first extension to be loaded:
+  config.extensions = [ :shards, :textile_filter, :markdown_filter, :all ]
+
+# From your Rails app root type this command:
+<pre>
+  rake RAILS_ENV=production radiant:extensions:copy_move:install
+</pre>
+which will copy some needed files to the public directory of your app.
+
+h2. Contributors
+
+ * Benny Degezelle
+ * Mario T. Lanza     
+ * Daniel Collis-Puro
+ * Sean Cribbs
+ * Andrew vonderLuft
+ 
+h2. Credits
+
+This extension contains icons from the FamFamFam Silk icon set. See http://famfamfam.com/
