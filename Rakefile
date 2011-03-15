@@ -3,9 +3,9 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "radiant-copy_move-extension"
     gem.summary = %Q{Copy/Move extension for Radiant CMS}
-    gem.description = %Q{Allows you to to copy pages or move them under a new parent. }
+    gem.description = %Q{With this extension you can copy or move a page with or without its children.}
     gem.email = "benny@gorilla-webdesign.be"
-    gem.homepage = "http://github.com/jomz/radiant-comments-extension"
+    gem.homepage = "http://github.com/jomz/radiant-copy-move"
     gem.authors = ["Benny Degezelle"]
     gem.add_dependency 'radiant', ">=0.9.1"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
