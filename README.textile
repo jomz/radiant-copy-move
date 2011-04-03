@@ -1,7 +1,7 @@
 h1. CopyMove
 
   * Created by: Andrea Franz - http://gravityblast.com
-  * Version: 2.3.0 (compatible with Radiant >= 0.9.1)
+  * Version: 2.3.2 (compatible with Radiant >= 0.9.1)
   * Contact: andrea AT gravityblast DOT com
 
   * This fork merged from others, refactored and extended by:  Andrew vonderLuft - http://avlux.net
