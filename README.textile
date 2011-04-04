@@ -1,44 +1,58 @@
 h1. CopyMove
 
-  * Created by: Andrea Franz - http://gravityblast.com
-  * Version: 2.3.2 (compatible with Radiant >= 0.9.1)
-  * Contact: andrea AT gravityblast DOT com
-
-  * This fork merged from others, refactored and extended by:  Andrew vonderLuft - http://avlux.net
-  * Contact: avonderluft AT avlux DOT net
+  * Created by: Andrea Franz - http://gravityblast.com - andrea AT gravityblast DOT com
+  * Current version merged from other forks, refactored and extended by:  Andrew vonderLuft - avonderluft AT avlux DOT net
 
 h2. Description
 
-This extension adds a new action ('CopyMove') in the Radiant's administration interface near the 'Add child' button. With this extension you can copy or move a page with or without its children.
+This extension adds a Copy/Move action to the Radiant Page Index administration interface near the 'Add child' button. With this extension you can copy or move a page with or without its children.
 
 h2. Updates
 
-* 2.3.0 - 03/2011 - merged updates from othe forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
-
-h2. Requirements
-
-* For Radiant versions < 0.6.7 You need the "shards extension":http://groups.google.com/group/radiantcms-dev/browse_frm/thread/d07f7fffd84b3ce0/5efa6fd6c2e1668e?lnk=gst&q=shards#5efa6fd6c2e1668e 
-* Radiant versions >= 0.6.7 and greater have Shards built in.
+* 2.3.x - 03/2011 - merged updates from other forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
 
 h2. Installation
 
-# Get the latest version of CopyMove extension code:
-  
-  <pre>
-  cd vendor/extensions  
-	git clone git://github.com/avonderluft/radiant-copy-move.git copy_move
-	</pre>
+h3. From the Radiant Extension Registry
 
-## For Radiant versions < 0.6.7
+# From your RAILS_ROOT run:
+<pre>script/extension install copy_move</pre>
+# Restart your app
+NOTE: In some earlier versions of Radiant, the assets may not be copied and you may therefore need to run:
+<pre>rake radiant:extensions:copy_move:update</pre>
 
-Open the environment.rb and set shards as first extension to be loaded:
+h3. From Github
+
+# From your RAILS_ROOT run:
+<pre>cd vendor/extensions
+git clone git://github.com/jomz/radiant-copy-move.git ./copy_move
+cd ../../
+rake radiant:extensions:copy_move:update
+</pre>
+# Restart your app
+
+h3. Using the gem
+
+# Install the gem
+<pre>gem install radiant-copy_move-extension</pre>
+# Update your Radiant config:  add to environment.rb with the other gem.configs
+<pre>config.gem 'radiant-copy_move_-extension', :lib => false</pre>
+# Copy assets
+<pre>rake radiant:extensions:update_all</pre>
+# Restart your app
+
+h2. Requirements fo very old versions (you really should upgrade)
+
+For Radiant versions < 0.6.7 You need the "shards extension":http://groups.google.com/group/radiantcms-dev/browse_frm/thread/d07f7fffd84b3ce0/5efa6fd6c2e1668e?lnk=gst&q=shards#5efa6fd6c2e1668e
+
+* Open the environment.rb and set shards as first extension to be loaded:
   config.extensions = [ :shards, :textile_filter, :markdown_filter, :all ]
 
-# From your Rails app root type this command:
-<pre>
-  rake RAILS_ENV=production radiant:extensions:copy_move:install
-</pre>
-which will copy some needed files to the public directory of your app.
+Radiant versions >= 0.6.7 and greater have Shards built in.
+
+h2. Usage
+
+See the HELP.rdoc
 
 h2. Contributors
 
