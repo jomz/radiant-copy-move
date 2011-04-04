@@ -1,9 +1,9 @@
 require_dependency 'application_controller'
 
 class CopyMoveExtension < Radiant::Extension
-  version "2.3.2"
+  version "#{File.read(File.expand_path(File.dirname(__FILE__)) + '/VERSION')}"
   description "Adds the ability to copy or move a page with or without its children"
-  url "https://github.com/avonderluft/radiant-copy-move"
+  url "https://github.com/jomz/radiant-copy-move"
 
   def activate
     Admin::PagesController.class_eval do
