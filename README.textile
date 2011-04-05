@@ -9,7 +9,8 @@ This extension adds a Copy/Move action to the Radiant Page Index administration 
 
 h2. Updates
 
-* 2.3.x - 03/2011 - merged updates from other forks, refactored for Blade UI in Radiant 0.9 or greater - Andrew vonderLuft
+* 2.3.x - 03/2011 - merged updates from other forks, refactored for Blade UI in Radiant 1.0 or greater - Andrew vonderLuft
+* 2.2.0 - 10/2010 - Radiant 0.9.1 compatible
 
 h2. Installation
 
@@ -41,7 +42,7 @@ h3. Using the gem
 <pre>rake radiant:extensions:update_all</pre>
 # Restart your app
 
-h2. Requirements fo very old versions (you really should upgrade)
+h2. Requirements for very old versions (you really should upgrade)
 
 For Radiant versions < 0.6.7 You need the "shards extension":http://groups.google.com/group/radiantcms-dev/browse_frm/thread/d07f7fffd84b3ce0/5efa6fd6c2e1668e?lnk=gst&q=shards#5efa6fd6c2e1668e
 
