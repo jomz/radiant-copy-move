@@ -7,7 +7,7 @@ begin
     gem.email = "benny@gorilla-webdesign.be"
     gem.homepage = "https://github.com/jomz/radiant-copy-move"
     gem.authors = ["Benny Degezelle","Andrew vonderLuft"]
-    gem.add_dependency 'radiant', ">=0.9.1"
+    gem.add_dependency 'radiant', ">=1.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError

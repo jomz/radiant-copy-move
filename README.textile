@@ -9,8 +9,8 @@ This extension adds a Copy/Move action to the Radiant Page Index administration 
 
 h2. Updates
 
-* 2.3.x - 03/2011 - merged updates from other forks, refactored for Blade UI in Radiant 1.0 or greater - Andrew vonderLuft
-* 2.2.0 - 10/2010 - Radiant 0.9.1 compatible
+* 2.3.x - 03/2011 - merged updates from other forks, refactored; Radiant 1.0 or greater - Andrew vonderLuft
+* 2.2.0 - 10/2010 - Radiant 0.9.1 compatible - Benny Degezelle
 
 h2. Installation
 
