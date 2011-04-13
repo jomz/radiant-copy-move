@@ -66,10 +66,10 @@ describe CopyMove do
   
   describe "copying the page with first-level children" do
     it "should copy the page and its children" do
-      @page = pages(:assorted)
+      @page = pages(:parent)
       @new_page = @page.copy_with_children_to(pages(:first))
       @new_page.parent.should == pages(:first)
-      @new_page.should have(12).children
+      @new_page.should have(3).children
     end
     
     it "should not copy grandchild pages" do
@@ -80,7 +80,7 @@ describe CopyMove do
     end
     
     it "should override the status when given" do
-      @page = pages(:assorted)
+      @page = pages(:parent)
       @new_page = @page.copy_with_children_to(pages(:first), Status[:hidden].id)
       @new_page.status.should == Status[:hidden]
       @new_page.children.each do |child|

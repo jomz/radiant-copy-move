@@ -56,11 +56,11 @@ describe Admin::PagesController do
   
   describe "POST to /admin/pages/:id/copy_children" do
     before :each do
-      post :copy_children, :id => page_id(:assorted), :parent_id => page_id(:another)
+      post :copy_children, :id => page_id(:parent), :parent_id => page_id(:another)
     end
     
     it "should load the page" do
-      assigns[:page].should == pages(:assorted)
+      assigns[:page].should == pages(:parent)
     end
     
     it "should load the parent page" do
@@ -72,7 +72,7 @@ describe Admin::PagesController do
     end
     
     it "should have copied the children" do
-      assigns[:new_page].should have(12).children
+      assigns[:new_page].should have(3).children
     end
     
     it "should write a flash notice" do
