@@ -3,7 +3,10 @@
   %p
     %label= "Page: #{@page.title} ( #{@page.path} )"
   %p
-    %label= "Parent: #{@page.parent.title} ( #{@page.parent.path} )"
+    - if @page.parent
+      %label= "Parent: #{@page.parent.title} ( #{@page.parent.path} )"
+    - else
+      %label= "Parent: none"
   %hr
   %p
     %label{:for => 'parent_id'} 
