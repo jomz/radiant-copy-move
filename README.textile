@@ -55,6 +55,13 @@ h2. Usage
 
 See the HELP.rdoc
 
+For larger sites, you may want to exclude certain pages from coming up in the "new parent" select for performance and/or usability reasons.
+There are 2 options:
+
+1/ Create a page field called "exclude_children_from_copy_move_target" to not display it's children in the list.
+2/ Set Radiant::Config["copy_move.exclude_archive_children"] to true to not display children from ArchivePages
+
+
 h2. Contributors
 
  * Benny Degezelle
