@@ -15,12 +15,12 @@ en:
     copy_children_description: "This will create a copy of this page and its immediate first-level children under a new parent"
 
     copied:
-      'A copy of <strong>{{page}}</strong> was created under <strong>{{parent}}</strong>.'
+      'A copy of <strong>%{page}</strong> was created under <strong>%{parent}</strong>.'
     moved:
-      'Page <strong>{{page}}</strong> was moved under <strong>{{parent}}</strong>.'
+      'Page <strong>%{page}</strong> was moved under <strong>%{parent}</strong>.'
     immediate_children_copied:
-      'Copies of <strong>{{page}}</strong> and its immediate children were created under <strong>{{parent}}</strong>'
+      'Copies of <strong>%{page}</strong> and its immediate children were created under <strong>%{parent}</strong>'
     descendants_copied:
-      'Copies of <strong>{{page}}</strong> and all its descendants were created under <strong>{{parent}}</strong>.'
+      'Copies of <strong>%{page}</strong> and all its descendants were created under <strong>%{parent}</strong>.'
     descendants_moved:
-      'Page <strong>{{page}}</strong> and all its descendants were moved under <strong>{{parent}}</strong>.'
+      'Page <strong>%{page}</strong> and all its descendants were moved under <strong>%{parent}</strong>.'
