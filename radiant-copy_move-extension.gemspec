@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{radiant-copy_move-extension}
-  s.version = "2.4.2"
+  s.version = "2.4.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Benny Degezelle", "Andrew vonderLuft"]
-  s.date = %q{2011-06-22}
+  s.date = %q{2011-06-27}
   s.description = %q{With this extension you can copy or move a page with or without its children.}
   s.email = %q{benny@gorilla-webdesign.be}
   s.extra_rdoc_files = [
@@ -54,7 +54,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{https://github.com/jomz/radiant-copy-move}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Copy/Move extension for Radiant CMS}
   s.test_files = [
     "spec/controllers/copy_move_controller_spec.rb",
