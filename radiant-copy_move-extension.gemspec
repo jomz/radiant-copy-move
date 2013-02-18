@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{radiant-copy_move-extension}
-  s.version = "2.4.3"
+  s.name = "radiant-copy_move-extension"
+  s.version = "2.4.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Benny Degezelle", "Andrew vonderLuft"]
-  s.date = %q{2011-06-27}
-  s.description = %q{With this extension you can copy or move a page with or without its children.}
-  s.email = %q{benny@gorilla-webdesign.be}
+  s.date = "2013-02-18"
+  s.description = "With this extension you can copy or move a page with or without its children."
+  s.email = "benny@gorilla-webdesign.be"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.textile",
@@ -52,15 +52,10 @@ Gem::Specification.new do |s|
     "spec/spec.opts",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{https://github.com/jomz/radiant-copy-move}
+  s.homepage = "https://github.com/jomz/radiant-copy-move"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Copy/Move extension for Radiant CMS}
-  s.test_files = [
-    "spec/controllers/copy_move_controller_spec.rb",
-    "spec/models/copy_move_spec.rb",
-    "spec/spec_helper.rb"
-  ]
+  s.rubygems_version = "1.8.25"
+  s.summary = "Copy/Move extension for Radiant CMS"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
