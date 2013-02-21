@@ -98,8 +98,8 @@ describe CopyMove do
       @new_page = @page.copy_tree_to(pages(:first))
       @new_page.parent.should == pages(:first)
       @new_page.should have(3).children
-      @new_page.children.first.should have(1).child
-      @new_page.children.first.children.first.should have(1).child
+      @new_page.should have(pages(:parent).children.count).children
+      @new_page.children.descendants.count.should == pages(:parent).children.descendants.count
     end
     
     it "should override the status when given" do
@@ -107,9 +107,10 @@ describe CopyMove do
       @new_page.status.should == Status[:hidden]
       @new_page.children.each do |child|
         child.status.should == Status[:hidden]
+        child.children.each do |grandchild|
+          grandchild.status.should == Status[:hidden]
+        end
       end
-      @new_page.children.first.children.first.status.should == Status[:hidden]
-      @new_page.children.first.children.first.children.first.status.should == Status[:hidden]
     end
   end
 end

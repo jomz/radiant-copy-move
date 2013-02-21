@@ -102,8 +102,8 @@ describe Admin::PagesController do
     end
     
     it "should have copied the descendants" do
-      assigns[:new_page].should have(3).children
-      assigns[:new_page].children.first.should have(1).child
+      assigns[:new_page].should have(pages(:parent).children.count).children
+      assigns[:new_page].children.descendants.count.should == pages(:parent).children.descendants.count
     end
     
     it "should write a flash notice" do
