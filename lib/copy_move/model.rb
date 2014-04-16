@@ -5,9 +5,10 @@ module CopyMove
       test_page.parent = parent
       until test_page.valid?
         index = (index || 0) + 1
-        test_page.title = "#{title} Copy #{index}"
-        test_page.slug = "#{slug}-copy-#{index}"
-        test_page.breadcrumb = test_page.title
+        raise "Couldn't generate new slug for #{id} under #{parent.id}: #{test_page.errors.full_messages.inspect}" if index > 100
+        test_page.title = "#{title} Copy #{index}".first(255)
+        test_page.slug = "#{slug}-copy-#{index}".first(100)
+        test_page.breadcrumb = test_page.title.first(160)
         test_page.errors.clear # Reset error status before revalidating
       end
       {:slug => test_page.slug, :title => test_page.title, :breadcrumb => test_page.breadcrumb}
