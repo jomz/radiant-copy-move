@@ -1,26 +1,25 @@
 fr:
   copy_move:
-    button: "Copier/Déplacer"
-    copy_or_move_page: "Copy or Move Page"
-    copy_page: "Copy Page"
-    copy_page_only: "Copy Page Only"
-    copy_page_description: "This will create a copy of this single page under a new parent"
-    copy_whole_subtree: "Copy Whole Subtree"
-    copy_tree_description: "This will create a copy of this page and all its descendants under a new parent"
-    move_entire_subtree: "Move Entire Subtree"
-    move_tree_description: "This will move this page and all its descendants under a new parent"
-    move_page: "Move Page"
-    move_page_description: "This will move this page under a new parent"
-    copy_with_first_level_children: "Copy With First-level Children"
-    copy_children_description: "This will create a copy of this page and its immediate first-level children under a new parent"
-
+    button: "Copier/D&eacute;placer"
+    copy_or_move_page: "Copier ou d&eacute;placer Page"
+    copy_page: "Copier Page"
+    copy_page_only: "Copier cette Page seulement"
+    copy_page_description: "Cela va cr&eacute;er une copie de cette page sous un nouveau parent"
+    copy_whole_subtree: "Copier sous-arborescence enti&egrave;re"
+    copy_tree_description: "Cela va cr&eacute;er une copie de cette page et tous ses descendants sous un nouveau parent"
+    move_entire_subtree: "D&eacute;placer sous-arborescence enti&egrave;re"
+    move_tree_description: "Cela va d&eacute;placer cette page et tous ses descendants sous un nouveau parent"
+    move_page: "D&eacute;placer Page"
+    move_page_description: "Cela va d&eacute;placer cette page sous un nouveau parent"
+    copy_with_first_level_children: "Copier avec sous-arborescence de premi&eacute;r niveau"
+    copy_children_description: "Cela va cr&eacute;er une copie de cette page et ses enfants imm&eacute;diats de premier niveau sous un nouveau parent"
     copied:
-      'A copy of <strong>%{page}</strong> was created under <strong>%{parent}</strong>.'
+      'Une copie de <strong>%{page}</strong> a &eacute;t&eacute; cr&eacute;&eacute; sous <strong>%{parent}</strong>.'
     moved:
-      'Page <strong>%{page}</strong> was moved under <strong>%{parent}</strong>.'
+      'Page <strong>%{page} </strong> a &eacute;t&eacute; d&eacute;plac&eacute; sous <strong>%{parent}</strong>.'
     immediate_children_copied:
-      'Copies of <strong>%{page}</strong> and its immediate children were created under <strong>%{parent}</strong>'
+      'Des copies de <strong>%{page}</strong> et ses enfants imm&eacute;diats ont &eacute;t&eacute; cr&eacute;&eacute;s sous <strong>%{parent}</strong>'
     descendants_copied:
-      'Copies of <strong>%{page}</strong> and all its descendants were created under <strong>%{parent}</strong>.'
+      'Des copies de <strong>%{page}</strong> et tous ses descendants ont &eacute;t&eacute; cr&eacute;&eacute;s sous <strong>%{parent}</strong>.'
     descendants_moved:
-      'Page <strong>%{page}</strong> and all its descendants were moved under <strong>%{parent}</strong>.'
+      'Page <strong>%{page}</strong> et tous ses descendants ont &eacute;t&eacute; d&eacute;plac&eacute;s sous <strong>%{parent}</strong>.'
