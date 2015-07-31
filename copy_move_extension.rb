@@ -11,7 +11,7 @@ class CopyMoveExtension < Radiant::Extension
       helper :copy_move
     end
     Page.class_eval { include CopyMove::Model }
-    admin.page.index.add :sitemap_head, 'copy_move_extra_th', :before => 'actions_column_header'
-    admin.page.index.add :node, 'copy_move_extra_td', :before => 'actions_column'
+    admin.page.index.add :sitemap_head, 'copy_move_extra_th', :after => 'actions_column_header'
+    admin.page.index.add :node, 'copy_move_extra_td', :after => 'actions_column'
   end
 end
